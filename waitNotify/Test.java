@@ -8,18 +8,18 @@ public class Test {
         for(int i=1;i<6;i++)
         {
             int finalI = i;
-            new Thread(new Runnable() {		//¼Ì³ÐThreadÀà
+            new Thread(new Runnable() {		//Â¼ÃŒÂ³ÃThreadÃ€Ã 
                 @Override
                 public void run() {
-                    storage.produce(String.format("Éú²úÕß%d:", finalI));
+                    storage.produce(String.format("ç”Ÿäº§è€…%d:", finalI));
                 }
             }).start();
         }
 
-        for(int i=1;i<5;i++)
+       for(int i=1;i<5;i++)
         {
             int finalI = i;
-            new Thread(()-> storage.consume(String.format("Ïû·ÑÕß%d:", finalI))).start();
+            new Thread(()-> storage.consume(String.format("æ¶ˆè´¹è€…%d:", finalI))).start();
         }
     }
 }
