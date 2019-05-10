@@ -11,7 +11,7 @@ public class Test {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    storage.produce(String.format("Éú²úÕß%d:", finalI));
+                    storage.produce(String.format("ç”Ÿäº§è€…%d:", finalI));
                 }
             }).start();
         }
@@ -19,7 +19,7 @@ public class Test {
         for(int i=1;i<5;i++)
         {
             int finalI = i;
-            new Thread(()-> storage.consume(String.format("Ïû·ÑÕß%d:", finalI))).start();
+            new Thread(()-> storage.consume(String.format("æ¶ˆè´¹è€…%d:", finalI))).start();
         }
     }
 }
