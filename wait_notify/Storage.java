@@ -1,8 +1,8 @@
-package waitNotify;
+package wait_notify;
 import java.util.LinkedList;		//LinkedList存储结构为链表
 
 public class Storage {
-	private final int Max_size=3;	//不能被继承
+	private final int Max_size=5;	//不能被继承,设置最大容量
 	private LinkedList<Object> list=new LinkedList<Object>();
 	
 	public void produce(String producer) {
